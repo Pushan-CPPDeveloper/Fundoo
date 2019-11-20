@@ -1,0 +1,26 @@
+<div fxLayoutAlign="center center" >
+  <mat-card fxLayout="column" fxLayoutGap="10px" class="card-component" fxShow="true" fxShow.xs="false">
+    <mat-card-title fxLayoutAlign="center">Log In</mat-card-title>
+    <p fxLayoutAlign="center">Use your Fundoo Account</p>
+    <form [formGroup]="userForm" (ngSubmit)="Submit()">
+      <p>
+        <mat-form-field appearance="standard" class="input-component">
+          <mat-label>email</mat-label>
+          <input matInput type="text" formControlName="email" placeholder="example@abc.com">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="standard" class="input-component">
+          <mat-label>password</mat-label>
+          <input matInput type="password" formControlName="password" placeholder="password">
+        </mat-form-field>
+      </p>
+      <button mat-raised-button style="background-color: rgb(198, 119, 221)" type="submit">SUBMIT</button>
+      <div id="create">
+      <button mat-button color='warn' (click)="Click()">Create account</button>
+    </div>
+    </form>
+    
+  </mat-card>
+
+  </div>

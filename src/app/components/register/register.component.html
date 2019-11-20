@@ -1,0 +1,70 @@
+<div fxLayoutAlign="center center">
+  
+  <mat-card fxLayout="row" fxLayoutGap="10px" class="card-component">
+    <div fxLayout="column" fxLayoutGap="10px">
+    <mat-card-title fxLayoutAlign="center">SignUp</mat-card-title>
+    <mat-card-subtitle fxLayoutAlign="center" >Get a NEW FUNDOO a/c.</mat-card-subtitle>
+    <form [formGroup]="userForm" (ngSubmit)="Submit()">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15px">      
+         <!-- FIRSTNAME: -->
+      <p>
+        <mat-form-field appearance="fill" class="input-component-row">
+          <mat-label><i>firstname</i></mat-label>
+          <input matInput formControlName="firstname" type="text" placeholder="First Name">
+        </mat-form-field>
+      </p>
+      <p>
+        <!-- LASTNAME: -->
+        <mat-form-field appearance="fill" class="input-component-row" >
+          <mat-label><i>lastname</i></mat-label>
+          <input matInput formControlName="lastname" type="text" placeholder="Lastname">
+        </mat-form-field>
+      </p>
+    </div>
+    <p>
+        <!-- Email: -defined here....->
+        <mat-form-field appearance="fill" fxFlex="80" class="input-component">
+          <mat-label>email</mat-label>
+          <input matInput formControlName="email" type="text" placeholder="example@abc.xy">
+        </mat-form-field>
+      </p>
+
+      <p>
+       
+        <mat-form-field appearance="fill" fxFlex="90" class="input-component">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" placeholder="Enter Valid Password">
+          <mat-hint>Enter a more than 6 characters and less than 12</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+          <mat-form-field appearance="fill" fxFlex="90" class="input-component">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput formControlName="confirm_password" type="password" placeholder="Re-enter above password">
+            <mat-hint>Ensure both the passwords entered are same</mat-hint>
+          </mat-form-field>
+        </p>
+  
+      <p>
+        <!- Password: -->
+        <mat-form-field appearance="standard" fxFlex="80" class="input-component">
+          <mat-label>SERVICE</mat-label>
+          <mat-select formControlName="service" placeholder="Service Type">
+          <mat-hint>Choose a Type of Service</mat-hint>
+            <mat-option value="basic">Basic</mat-option>
+            <mat-option value="advanced">Advanced</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p>
+
+      <button mat-raised-button style="background-color: rgb(72, 109, 233)" type="submit">SUBMIT</button>
+    </form>
+    <mat-card-footer fxLayoutAlign="center">Thanks</mat-card-footer>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="center" fxShow="true" fxShow.xs="false">
+  <!-- <img alt="can not load this image" src="src/assets/images/Notes.png" height="300px" width="300px" fx> -->
+  </div>
+    
+  </mat-card>
+
+</div>
